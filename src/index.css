@@ -4,3 +4,14 @@
   margin:0px;
   font-family: 'Nunito',sans-serif;
 }
+
+:root{
+  --light-blue-shade:#667EEA;
+  --light-purple-shade:#8271D7;
+  --purple-shade:#9365C2;
+  --little-dark-purple:#9D5AAC;
+  --purple-700:#A25097;
+  --purple-full:#A24882;
+  --light-gery:#EDEEFF;
+  --gray-blue:#B4B6EE;
+}

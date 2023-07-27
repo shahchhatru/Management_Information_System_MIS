@@ -47,9 +47,8 @@ const SideBar = () => {
 
     const headerVariants={
         open:{
-            
-            top:"0px",
-            left:"0px",
+            top:"0",
+            left:"0",
         },
         closed:{
            

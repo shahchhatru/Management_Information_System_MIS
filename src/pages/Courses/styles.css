@@ -1,0 +1,28 @@
+.courses-container{
+    background-color: red;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    
+
+}
+
+.courses-container .header-section{
+    background:rebeccapurple;
+    flex:1;
+}
+
+.courses-container .body-section{
+    background:limegreen;
+    flex:5;
+    margin:0px 10px 10px 0px;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:10px;
+}
+
+.courses-container .footer-section{
+    flex:1;
+}
+

@@ -1,0 +1,35 @@
+.coursecard-container{
+    background:rgb(171, 31, 193);
+    min-height:100px;
+    height:auto;
+    border-radius: 4%;
+    display:flex;
+    flex-direction: row;
+    padding:10px 5px;
+    
+}
+
+.coursecard-container .logo-container{
+    flex:1;
+    margin-left:4px;
+    background-color: red;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.coursecard-container .logo-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin:4px;
+}
+
+.coursecard-container .body-container{
+    flex:3;
+    display:flex;
+    flex-direction: column;
+}
