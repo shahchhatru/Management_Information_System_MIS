@@ -8,22 +8,10 @@ const Courses = () => {
 
         </div>
         <div className='body-section'>
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
+           <CourseCard />
            
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
-            <CourseCard />
+            <CourseCard/>
+            <CourseCard/>
         
 
         </div>

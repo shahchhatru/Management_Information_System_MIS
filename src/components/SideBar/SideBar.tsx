@@ -81,7 +81,7 @@ const SideBar = () => {
         animate={isopen ? 'open' : 'closed'}
         variants={variants}>
           <motion.li variants={listItemVariants}>Profile</motion.li>
-          <motion.li variants={listItemVariants}>Class</motion.li>
+          <motion.li variants={listItemVariants}><Link to="/courses">Courses</Link></motion.li>
           <motion.li variants={listItemVariants}>Attendence</motion.li>
           <motion.li variants={listItemVariants}>Notice</motion.li>
           <motion.li variants={listItemVariants}><Link to="/login">Sign In</Link></motion.li>

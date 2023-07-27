@@ -1,5 +1,8 @@
-
+import {RiLoginBoxLine} from '@react-icons/all-files/ri/RiLoginBoxLine';
+import {DiGoogleAnalytics} from '@react-icons/all-files/di/DiGoogleAnalytics';
+import{MdSettings} from '@react-icons/all-files/md/MdSettings';
 import './styles.css'
+import { Link } from 'react-router-dom';
 
 const CourseCard = () => {
   return (
@@ -9,10 +12,21 @@ const CourseCard = () => {
         </div>
         <div className='body-container'>
             <div className='top-bar'>
-
+              <Link to="/">
+              <span className='icon'><DiGoogleAnalytics/></span>
+              </Link>
+             <Link to="/">
+              <span className='icon'><MdSettings/></span>
+              </Link>
+              <Link to="/courses/1">
+              <span className='icon'><RiLoginBoxLine/></span>
+              </Link>
             </div>
             <div className='desc'>
-
+                <h1>CN 506</h1>
+                <h2>Section :AB</h2>
+                <h3>Batch:076</h3>
+                <p>Short Description</p>
             </div>
         </div>
     </div>
