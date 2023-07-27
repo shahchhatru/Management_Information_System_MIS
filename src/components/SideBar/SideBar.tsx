@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import {useState} from 'react';
 import {motion} from 'framer-motion';
 import "./sideBar.css"
 
@@ -48,8 +48,8 @@ const SideBar = () => {
     const headerVariants={
         open:{
             position:'relative',
-            top:0,
-            left:0,
+            top:"0px",
+            left:"0px",
         },
         closed:{
             position: "relative",
