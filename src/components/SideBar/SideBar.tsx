@@ -47,12 +47,12 @@ const SideBar = () => {
 
     const headerVariants={
         open:{
-            position:'relative',
+            
             top:"0px",
             left:"0px",
         },
         closed:{
-            position: "relative",
+           
             top:"16px",
             left:"24%",
             scale:'0.9',
