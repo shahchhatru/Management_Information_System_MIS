@@ -1,10 +1,10 @@
-import {useState} from 'react';
-import {motion} from 'framer-motion';
+// import {useState} from 'react';
+// import {motion} from 'framer-motion';
 import { Link } from 'react-router-dom';
 import "./sideBar.css"
 
 const SideBar = () => {
-    const [isopen,setIsOpen]=useState<boolean>(true);
+    // const [isopen,setIsOpen]=useState<boolean>(true);
    
   return (
     <nav className="sidebar">
@@ -61,10 +61,10 @@ const SideBar = () => {
       </div>
       <div className="bottom-content">
          <li className="nav-link">
-            <a href="#">
+            <Link to="/login">
               <i className='bx bx-log-out icon' ></i>
               <span className="text nav-text">Log out</span>
-            </a>
+            </Link>
           </li>
          <li className="mode">
            <div className="moon-sun">
