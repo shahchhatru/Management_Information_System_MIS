@@ -4,7 +4,7 @@ const StudentCard = () => {
   return (
     <div className='student-container'>
         <div className='profile-container'>
-            <img src="/src/assets/images/cuteboy.jpg" />
+            <img src="/cuteboy.jpg" />
         </div>
         <div className='stu-body'>
             <div className='desc'>

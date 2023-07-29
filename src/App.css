@@ -16,3 +16,11 @@
   justify-content:center ;
   align-items: center;
 }
+
+@media screen and (mas-width:500px) {
+  .container-two{
+    width:100%;
+    padding:10px;
+  }
+  
+}

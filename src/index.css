@@ -2,7 +2,7 @@
   box-sizing: border-box;
   padding:0px;
   margin:0px;
-  font-family: 'Nunito',sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 :root{
@@ -14,4 +14,9 @@
   --purple-full:#A24882;
   --light-gery:#EDEEFF;
   --gray-blue:#B4B6EE;
+}
+
+html,body{
+  width:100vw;
+  height:100vh;
 }

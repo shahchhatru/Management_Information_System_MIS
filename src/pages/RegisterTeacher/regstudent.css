@@ -14,10 +14,23 @@
 .ani-container{
     background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
     display: flex;
-    justify-content: center;
+    flex-direction:column;
+    justify-content: space-around;
     align-items: center;
+    gap:10px;
 
 }
+.ani-container  .sub-section{
+  font-size:1.2rem;
+  /* background:red; */
+  width:50%;
+  display:flex;
+  justify-content: space-evenly;
+  align-items:center;
+  height:60px;
+  border-radius:6px;
+}
+
 
 input{
     border:none;
@@ -62,7 +75,7 @@ input{
     justify-content: space-evenly;
     align-items: center;
     width:100%;
-    margin:8px 0px;
+    
 }
 
 input::placeholder{
@@ -111,8 +124,9 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     overflow: hidden;
+    /* background:red; */
     
   
 }

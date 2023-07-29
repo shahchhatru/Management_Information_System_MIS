@@ -73,3 +73,22 @@
     color:limegreen;
     cursor:pointer;
 }
+
+@media screen and (max-width:800px){
+    .coursecard-container{
+        width:70%;
+        min-height: 200px;
+        height:auto;
+        margin:2% 1%;
+    }
+
+    .coursecard-container .logo-container img{
+        width:90px;
+        height:90px;
+    }
+
+    .coursecard-container .body-container .top-bar .icon{
+        font-size:2rem;
+    }
+
+}
