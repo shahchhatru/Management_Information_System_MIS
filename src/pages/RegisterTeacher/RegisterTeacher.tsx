@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
 import {motion} from 'framer-motion';
 import './regstudent.css';
-import StudhatAni from '../../components/animation/StudhatAni';
 import InputBox from '../../components/InputBox/InputBox';
 
 
