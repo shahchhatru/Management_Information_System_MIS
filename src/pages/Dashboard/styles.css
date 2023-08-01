@@ -3,6 +3,7 @@
    height: 100%;
     display:flex;
     flex-direction: column;
+    
 }
 
 .dashboard-container .header{
@@ -33,11 +34,15 @@
     width:100%;
     flex:4;
     margin:10px 0px;
-    border:4px solid blueviolet;
     border-radius:10px;
     position:relative;
+    
+   
 }
 
+.dashboard-container .activity-container .carousel{
+    padding:10px 20px;
+}
 .dashboard-container .activity-container h2,
 .dashboard-container .event-container h2
 {
@@ -70,13 +75,30 @@
     flex-wrap:wrap;
     padding-top:40px;
     padding-left:8px;
+    gap:30px;
+    max-height: 50vh;
 }
 
 @media  screen and (max-width:500px) {
     
 
 .dashboard-container .activity-container .activity-list{
+    display: flex;
     flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width:80vw;
+   
+    gap:30px;
+   
 }
+
+.carousel{
+    cursor: grab;
+    overflow: hidden;
+    height:100%;
+  }
+  
 
 }
