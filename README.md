@@ -25,3 +25,24 @@ If you are developing a production application, we recommend updating the config
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+## Follow the instructions to begin your project setup
+### First clone the repo
+```bash 
+git clone https://github.com/shahchhatru/Management_Information_System_MIS.git
+
+```
+
+### Install the dependencies
+```node
+
+npm install
+```
+
+### Run the development server
+
+```node 
+npm run dev
+
+```
