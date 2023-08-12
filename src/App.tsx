@@ -3,10 +3,12 @@ import './App.css'
 import { Route, Routes } from 'react-router-dom';
 import { Courses, Login ,Course,RegisterTeacher, Dashboard} from './pages';
 import PageNotFound from './pages/NotFound/PageNotFound';
+import Routines from './pages/Routines/Routines';
+import AddPeriod from './pages/AddPeriod/AddPeriod';
 
-function App() {
-  
+ function App() {
 
+ 
   return (
     <>
     <div className='container'>
@@ -24,6 +26,10 @@ function App() {
         <Route path="" element={<Courses/>} />
         <Route path=":id" element={<Course/>} />
         
+      </Route>
+      <Route path="/routine">
+        <Route path="" element={<Routines/>} />
+        <Route path="add" element={<AddPeriod/>} />
       </Route>
       <Route path="/*" element={<PageNotFound/>} />
      </Routes>

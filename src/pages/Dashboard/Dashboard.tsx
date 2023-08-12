@@ -43,18 +43,18 @@ const Dashboard = (): JSX.Element=> {
             title="Register Teacher"
           />
            <AdminOptionCard
-            linkaddr="/register/teacher"
+            linkaddr="/routine/add"
             Iid="1"
             imgPath="/office.svg"
-            imgtext="create teacher"
-            title="Register Teacher"
+            imgtext="create Period"
+            title="Add Period"
           />
           <AdminOptionCard
-          linkaddr="/register/student"
+          linkaddr="/routine"
           Iid="2"
           imgPath="/student.svg"
-          imgtext="create student"
-          title="Register student"
+          imgtext="view Routines"
+          title="View Routines"
           />
           <AdminOptionCard
             linkaddr="/register/teacher"
