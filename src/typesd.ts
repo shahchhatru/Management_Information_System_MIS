@@ -10,8 +10,14 @@ interface FormValueProps{
     room_number: string,
 }
 
+// export type Action = {
+//     type: string;
+//     field: string;
+//     value: string | null;
+// };
+
 export type Action = {
-    type: string;
-    field: string;
-    value: string | null;
+  type: string;
+  field: keyof FormValueProps;
+  value: FormValueProps[keyof FormValueProps] | null;
 };

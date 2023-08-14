@@ -5,20 +5,20 @@ import InputBox from "../../components/InputBox/InputBox";
 import SelectorBox from "../../components/SelectorBox/SelectorBox";
 import RadioInput from "../../components/RadioInput/RadioInput";
 import DaySelectorBox from "../../components/SelectorBox/DaySelectorBox";
-import { FormValueProps, Action } from '../../typesd.ts';
+
 
  
-// interface FormValueProps{
-//         teacher: number;
-//         subject: number;
-//         year: number,
-//         course: number;
-//         day: string;
-//         time_start: string,
-//         time_end: string,
-//         session_type: string,
-//         room_number: string
-// }
+interface FormValueProps{
+        teacher: number;
+        subject: number;
+        year: number,
+        course: number;
+        day: string;
+        time_start: string,
+        time_end: string,
+        session_type: string,
+        room_number: string
+}
 
 const formData: FormValueProps = {
   teacher: 123,
@@ -32,11 +32,11 @@ const formData: FormValueProps = {
   room_number: "A101"
 };
 
-// type Action = {
-//   type: string;
-//   field: keyof FormValueProps;
-//   value: FormValueProps[keyof FormValueProps] | null;
-// };
+type Action = {
+  type: string;
+  field: keyof FormValueProps;
+  value: FormValueProps[keyof FormValueProps] | null;
+};
 
 // const FormContext = createContext<{
 //   state: FormValueProps;
@@ -66,11 +66,16 @@ const AddPeriod =  () => {
   const handleSubmit =  async (event: React.FormEvent) => {
     event.preventDefault(); // Prevent the default form submission behavior
     console.log("Form Data:", state);
+    
     try {
       const response = await axios.post('http://127.0.0.1:8000/api/routines/', state);
       console.log('POST Request Response:', response.data);
+      window.alert("success")
+      
     } catch (error) {
+
       console.error('Error sending POST request:', error);
+      window.alert('Error sending POST request:'+ error);
     }
   };
 

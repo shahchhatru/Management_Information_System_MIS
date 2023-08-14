@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import "./styles.css";
-import RadioInput from "../../components/RadioInput/RadioInput";
+import SRadioInput from "../../components/RadioInput/SRadioInput";
 import SSelectorBox from '../../components/SelectorBox/SSelextorBox';
 import SInputBox from '../../components/InputBox/SInputBox';
 
@@ -24,6 +24,7 @@ const Routines = () => {
   const [routines, setRoutines] = useState<Routine[]>([]);
   const [selectedTeacher, setSelectedTeacher] = useState<number | null>(null);
   const [selectedRoom, setSelectedRoom] = useState<string | null>(null);
+  const [page_no,setPageno]=useState<string>('1');
 
   const fetchRoutines = async (url: string,type:string) => {
     try {
@@ -64,7 +65,7 @@ const Routines = () => {
     <div className="routines-container">
       <div className="routines-sub-container">
         <div className="routine-tab">
-          <RadioInput />
+          <SRadioInput setState={setPageno} />
         </div>
         <div className="routine-form-pages">
           <div className="routine-page page-1">
@@ -96,7 +97,7 @@ const Routines = () => {
               </div>
             </form>
           </div>
-          <div className="routine-page page-2">
+          <div className="routine-page page-2" style={page_no=='1'?{zIndex:'1000',background:'#fff'}:{zIndex:'1'}}>
             <form onSubmit={(e)=>{
               e.preventDefault();
               handleSearchByTeacher();
@@ -109,9 +110,10 @@ const Routines = () => {
                     setState={setSelectedTeacher}
                   />
                   <button
-                    className="button-77 b2"
+                    className="button-77"
                     role="button"
                     type="submit"
+                    style={{width:"200px",height:"50px"}}
                   >
                     Search
                   </button>
@@ -119,7 +121,7 @@ const Routines = () => {
               </div>
             </form>
           </div>
-          <div className="routine-page page-3">
+          <div className="routine-page page-3" style={page_no=='2'?{zIndex:'1000',background:"#fff"}:{zIndex:'1'}}>
             <form onSubmit={(e)=>{
               e.preventDefault();
               handleSearchByRoom();
@@ -133,9 +135,10 @@ const Routines = () => {
                     inputId="room-no"
                   />
                   <button
-                    className="button-77 b3"
+                  className="button-77"
                   role="button"
-                   type="submit"
+                  type="submit"
+                  style={{width:"200px",height:"50px"}}
                   >
                     Search
                   </button>
