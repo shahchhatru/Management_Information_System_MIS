@@ -1,5 +1,6 @@
 import './styles.css';
-import { useState, useEffect, ChangeEvent } from 'react';
+import React,{ useState, useEffect, ChangeEvent } from 'react';
+import { Action } from '../../typesd.ts';
 import axios from 'axios';
 
 interface Teacher {
@@ -15,18 +16,28 @@ interface Teacher {
 interface SelectorBoxProps {
   title: string;
   link:string;
+  vfield?:string;
+  dispatch?:React.Dispatch<Action>|null;
 }
 
-const SelectorBox = ({ title ,link}: SelectorBoxProps) => {
+const SelectorBox = ({ title ,link,vfield,dispatch}: SelectorBoxProps) => {
   const [teachers, setTeachers] = useState<Teacher[]>([]);
-
-  const [selectedValue, setSelectedValue] = useState<string>('');
+  //const [selectedValue, setSelectedValue] = useState<string>('');
 
   const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
     const selectedOptionValue = event.target.value;
-    setSelectedValue(selectedOptionValue);
-    console.log('Selected value:', selectedOptionValue);
+   // setSelectedValue(selectedOptionValue);
+
+    if (dispatch && vfield) {
+      console.log("dispatch runned",vfield,selectedOptionValue);
+      dispatch({
+        type: 'UPDATE_FORM_FIELD',
+        field: vfield, // Adjust the field name according to your form structure
+        value: selectedOptionValue,
+      });
+    }
   };
+
 
   useEffect(() => {
     const fetchTeachers = async () => {
