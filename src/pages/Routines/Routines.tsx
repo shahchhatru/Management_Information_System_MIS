@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import "./styles.css";
 import RadioInput from "../../components/RadioInput/RadioInput";
 import SSelectorBox from '../../components/SelectorBox/SSelextorBox';
-import InputBox from '../../components/InputBox/InputBox';
 import SInputBox from '../../components/InputBox/SInputBox';
 
 interface Routine {
@@ -20,16 +20,17 @@ interface Routine {
 }
 
 const Routines = () => {
+  const navigate=useNavigate();
   const [routines, setRoutines] = useState<Routine[]>([]);
   const [selectedTeacher, setSelectedTeacher] = useState<number | null>(null);
   const [selectedRoom, setSelectedRoom] = useState<string | null>(null);
 
-  const fetchRoutines = async (url: string) => {
+  const fetchRoutines = async (url: string,type:string) => {
     try {
       const response = await axios.get(url);
       setRoutines(response.data);
       console.log("routines.data",response.data)
-      console.log("routines",routines)
+      navigate("/routine/view-teacher-routine", { state: { myRoutines: response.data,type:type } })
     } catch (error) {
       console.error('Error fetching routines:', error);
       alert('Error fetching routines:'+ error);
@@ -40,7 +41,7 @@ const Routines = () => {
 
     if (selectedTeacher !== null) {
       const url = `http://127.0.0.1:8000/api/routines/get_routines_by_teacher/?teacher_id=${selectedTeacher}`;
-      fetchRoutines(url);
+      fetchRoutines(url,"room");
       
     }
   };
@@ -48,14 +49,14 @@ const Routines = () => {
   const handleSearchByRoom = () => {
     if (selectedRoom !== null) {
       const url = `http://127.0.0.1:8000/api/routines/get_routines_by_room/?room_number=${selectedRoom}`;
-      fetchRoutines(url);
+      fetchRoutines(url,'teacher');
     }
   };
 
   const handleSearchByTeacherAndRoom = () => {
     if (selectedTeacher !== null && selectedRoom !== null) {
       const url = `http://127.0.0.1:8000/api/routines/get_routines_by_teacher_and_room/?teacher_id=${selectedTeacher}&room_number=${selectedRoom}`;
-      fetchRoutines(url);
+      fetchRoutines(url,'both');
     }
   };
 

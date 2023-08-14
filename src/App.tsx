@@ -4,7 +4,9 @@ import { Route, Routes } from 'react-router-dom';
 import { Courses, Login ,Course,RegisterTeacher, Dashboard} from './pages';
 import PageNotFound from './pages/NotFound/PageNotFound';
 import Routines from './pages/Routines/Routines';
+import Routine from './pages/Routine/Routine';
 import AddPeriod from './pages/AddPeriod/AddPeriod';
+import ViewTeacherRoutine from './pages/ViewTeacherRoutine/ViewTeacherRoutine';
 
  function App() {
 
@@ -30,6 +32,8 @@ import AddPeriod from './pages/AddPeriod/AddPeriod';
       <Route path="/routine">
         <Route path="" element={<Routines/>} />
         <Route path="add" element={<AddPeriod/>} />
+        <Route path="view" element={<Routine/>} />
+        <Route path="view-teacher-routine"  element={<ViewTeacherRoutine/>}/>
       </Route>
       <Route path="/*" element={<PageNotFound/>} />
      </Routes>
