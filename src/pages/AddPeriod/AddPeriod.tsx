@@ -17,19 +17,19 @@ interface FormValueProps{
         time_start: string,
         time_end: string,
         session_type: string,
-        room_number: string
+        room_number: string;
 }
 
 const formData: FormValueProps = {
-  teacher: 123,
-  subject: 456,
-  year: 2023,
-  course: 789,
-  day: "Monday",
-  time_start: "08:00 AM",
-  time_end: "10:00 AM",
+  teacher: 4,
+  subject: 3,
+  year: 3,
+  course: 2,
+  day: "mon",
+  time_start: "00:08:00 ",
+  time_end: "00:10:00 AM",
   session_type: "Lecture",
-  room_number: "A101"
+  room_number: "101"
 };
 
 type Action = {

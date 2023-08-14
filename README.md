@@ -46,3 +46,6 @@ npm install
 npm run dev
 
 ```
+### localhost://5173
+
+go to local host 
