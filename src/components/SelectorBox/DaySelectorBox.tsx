@@ -33,7 +33,7 @@ const DaySelectorBox = ({ title,vfield,dispatch }: SelectorBoxProps) => {
     <div className="selectbox-container">
       <div className="select">
         <select name="format" id="format" style={{ width: "400px" }} onChange={handleSelectChange}>
-          <option value="" disabled selected>
+          <option value="" disabled defaultValue={title}>
             {title}
           </option>
           <option value="sun">Sunday</option>
