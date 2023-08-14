@@ -1,7 +1,6 @@
 .teacherRoutineContainer{
-    background:red;
     width:80vw;
-    height:100vh;
+    height:100%;
     padding:40px;
     display:flex;
     flex-direction: column;
@@ -16,10 +15,11 @@
 .carousel {
     cursor: grab;
     overflow: hidden;
-    background: palevioletred;
+   
+    height:300px;
   }
   
-  .item {
+.item {
     min-height: 30rem;
     min-width: 20rem;
     padding: 40px;
@@ -31,7 +31,7 @@
   .inner-carousel {
     display: flex;
     gap:30px;
-    background: lightblue;
+    
     
   }
   

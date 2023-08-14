@@ -51,7 +51,7 @@ const SSelectorBox = ({ title ,link,setState}: SelectorBoxProps) => {
     <div className="selectbox-container">
       <div className="select">
         <select name="format" id="format" style={{ width: "400px" }} onChange={handleSelectChange}>
-          <option value="" disabled>
+          <option value=""  defaultValue={title}>
             {title}
           </option>
           {teachers.map((teacher) => (
