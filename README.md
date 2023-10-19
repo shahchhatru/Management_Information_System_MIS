@@ -1,3 +1,10 @@
+# Link to live working demo 
+https://management-information-system-mis.vercel.app/
+## 
+Note this demo is not connected to Django backend show all features may not work.
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
